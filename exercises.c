@@ -59,14 +59,14 @@ Crea una función que reciba una lista de enteros (int*) y
 retorne la suma de sus elementos.
 */
 int sumaLista(List *L) {
-   int suma = 0;
+   /* int suma = 0;
 
    void* elemento = first(L);
    for (int i = 0; i < 10; i++) {
       suma += (int*) elemento;
       next(L);
-   }
-   return suma;
+   } */
+   return 0;
 }
 // ./test.sh
 /*
