@@ -19,3 +19,14 @@ Wed, Mar 19, 2025  9:16:28 AM:
  tests:  1|4
 total_score: 10/70
 289c18a
+Wed, Mar 19, 2025  9:18:43 AM: 
+ exercises.c | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+In file included from test.c:5:0:
+exercises.c: In function 'sumaLista':
+exercises.c:66:12: error: assignment makes integer from pointer without a cast [-Werror=int-conversion]
+       suma += elemento;
+            ^~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+32d1ddd
