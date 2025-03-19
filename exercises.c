@@ -43,6 +43,13 @@ Al finalizar retorna la lista creada.
 
 List* crea_lista() {
    List* L = create_list();
+
+
+   for (int i = 1; i <= 10; i++) {
+      int* elemento = (int*) malloc(sizeof(int));
+      *(elemento) = i;
+      pushBack(L, elemento);
+   }
    return L;
 }
 
@@ -52,9 +59,16 @@ Crea una función que reciba una lista de enteros (int*) y
 retorne la suma de sus elementos.
 */
 int sumaLista(List *L) {
-   return 0;
-}
+   int suma = 0;
 
+   void* elemento = first(L);
+   for (int i = 0; i < 10; i++) {
+      suma += (int*) elemento;
+      next(L);
+   }
+   return suma;
+}
+// ./test.sh
 /*
 Ejercicio 3.
 Crea una función que reciba una lista de punteros a int (int*) y
@@ -88,4 +102,3 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
 int parentesisBalanceados(char *cadena) {
    return 0;
 }
-
