@@ -343,3 +343,16 @@ Fri, Mar 21, 2025  6:22:48 PM:
  tests:  9|0
 total_score: 70/70
 87d1a87
+Fri, Mar 21, 2025  6:25:43 PM: 
+ exercises.c | 19 ++++++++++++-------
+ 1 file changed, 12 insertions(+), 7 deletions(-)
+In file included from test.c:5:0:
+exercises.c: In function 'parentesisBalanceados':
+exercises.c:154:10: error: redefinition of 'palBack'
+    char *palBack = top(StackBack);
+          ^~~~~~~
+exercises.c:141:10: note: previous definition of 'palBack' was here
+    char *palBack = top(AuxStack);
+          ^~~~~~~
+Compilation failed
+c4468cd
