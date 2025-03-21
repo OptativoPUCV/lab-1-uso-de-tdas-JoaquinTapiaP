@@ -146,8 +146,8 @@ int parentesisBalanceados(char *cadena) {
 
    
 
-   char *palBack = top(StackBack);
-   char *palFront = top(StackFront);
+   char *palFront = top(StackBack);
+   char *palBack = top(StackFront);
    int aux = 0;
    
    for (int k = 0; k < talla; k++) {
