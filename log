@@ -317,3 +317,17 @@ Fri, Mar 21, 2025  6:19:44 PM:
  tests:  4|1
 total_score: 50/70
 f051575
+Fri, Mar 21, 2025  6:21:23 PM: 
+ exercises.c | 3 +++
+ 1 file changed, 3 insertions(+)
+In file included from test.c:5:0:
+exercises.c: In function 'parentesisBalanceados':
+exercises.c:155:23: error: format '%s' expects argument of type 'char *', but argument 2 has type 'int' [-Werror=format=]
+       printf("FRONT: %s\n", *palFront);
+                       ^
+exercises.c:156:22: error: format '%s' expects argument of type 'char *', but argument 2 has type 'int' [-Werror=format=]
+       printf("BACK: %s\n", *palBack);
+                      ^
+cc1.exe: all warnings being treated as errors
+Compilation failed
+fbdf24c
