@@ -64,3 +64,9 @@ c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot ope
 collect2.exe: error: ld returned 1 exit status
 Compilation failed
 323dd8b
+Fri, Mar 21, 2025  4:47:56 PM: 
+ exercises.c | 32 ++++++++++++++++++++++++++++----
+ 1 file changed, 28 insertions(+), 4 deletions(-)
+./test.sh: line 26: gcc: command not found
+Compilation failed
+ba2ccd2

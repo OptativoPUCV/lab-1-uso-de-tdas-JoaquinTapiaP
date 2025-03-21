@@ -60,15 +60,15 @@ retorne la suma de sus elementos.
 */
 int sumaLista(List *L) {
    int suma = 0;
-   int* elemento = first(L);
+   int *elemento = first(L);
 
    while (elemento != NULL) {
-      suma += *((int*)elemento);
-      next(L);
+      suma += *(elemento);
+      elemento = next(L);
    }
    return suma;
 }
-// ./test.sh
+// 
 /*
 Ejercicio 3.
 Crea una función que reciba una lista de punteros a int (int*) y
@@ -78,8 +78,15 @@ Asume que popCurrent luego de eliminar un elemento se
 posiciona en el elemento anterior.
 */
 
-void eliminaElementos(List*L, int elem){
+void eliminaElementos(List *L, int elem){
+   int *firstElem = first(L);
 
+   while (firstElem != NULL) {
+      if (*firstElem == elem) {
+         popCurrent(L);
+      }
+      firstElem = next(L);
+   }
 }
 
 /*
@@ -90,9 +97,26 @@ Puedes usar una pila auxiliar.
 */
 
 void copia_pila(Stack* P1, Stack* P2) {
+   Stack* aux = create_stack();
+   int *dato = top(P1);
+   while (dato != NULL) {
+      push(aux,dato);
+      pop(P1);
+
+      dato = top(P1);
+   }
+   
+   int *dato2 = top(aux);
+   while (dato2 != NULL) {
+      push(P2,dato2);
+      push(P1,dato2);
+      pop(aux);
+
+      dato2 = top(aux);
+   }
 }
 
-/*
+/* ./test.sh
 Ejercicio 5.
 La función verifica si la cadena de entrada tiene sus 
 paraéntesis balanceados. Retorna 1 si están balanceados,
