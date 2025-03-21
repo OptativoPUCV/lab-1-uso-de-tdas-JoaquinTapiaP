@@ -138,12 +138,12 @@ int parentesisBalanceados(char *cadena) {
       return 0;
    }  
 
-   char *palBack = top(AuxStack);
+   char *palAux = top(AuxStack);
    
    for (int i = 0; cadena[i] != '\0' ;i++) {
-      push(StackBack, &palBack);    
+      push(StackBack, &palAux);    
       pop(AuxStack);
-      palBack = top(AuxStack);
+      palAux = top(AuxStack);
    }
    
 
