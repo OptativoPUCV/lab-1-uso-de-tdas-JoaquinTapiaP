@@ -167,7 +167,7 @@ int parentesisBalanceados(char *cadena) {
    printf("AUXILIAR: %d\n", aux);
 
 
-   if (aux != (talla / 2)) {
+   if (aux != (talla)) {
       return 0;
    }
    return 1;
