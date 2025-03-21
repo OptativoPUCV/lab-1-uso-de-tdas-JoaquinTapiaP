@@ -129,17 +129,16 @@ int parentesisBalanceados(char *cadena) {
    Stack* StackBack = create_stack();
 
    for (int i = 0; cadena[i] != '\0' ;i++) {
-      push(StackFront, &cadena[i]); 
+      push(StackBack, &cadena[i]); 
           
    }
-   int talla = get_size(StackFront);
-   
+   int talla = get_size(StackBack);
    if (talla % 2 != 0) {
       return 0;
    }  
 
    for (int i = talla - 1; cadena[i] >= 0; i--) {
-      push(StackBack, &cadena[i]);
+      push(StackFront, &cadena[i]);
    }
    
 
@@ -147,8 +146,8 @@ int parentesisBalanceados(char *cadena) {
 
    
 
-   char *palBack = top(StackBack);
-   char *palFront = top(StackFront);
+   char *palFront = top(StackBack);
+   char *palBack = top(StackFront);
    int aux = 0;
    
    for (int k = 0; k < talla; k++) {
@@ -162,7 +161,7 @@ int parentesisBalanceados(char *cadena) {
       palFront = pop(StackFront);
    }
 
-   if (aux != (talla)) {
+   if (aux != (talla / 2)) {
       return 0;
    }
    return 1;
