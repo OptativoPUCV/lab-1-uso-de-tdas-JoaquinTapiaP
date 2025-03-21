@@ -157,3 +157,13 @@ Fri, Mar 21, 2025  5:57:54 PM:
  tests:  5|1
 total_score: 50/70
 b72f7f9
+Fri, Mar 21, 2025  5:59:23 PM: 
+ exercises.c | 15 ++++++++-------
+ 1 file changed, 8 insertions(+), 7 deletions(-)
+In file included from test.c:5:0:
+exercises.c: In function 'parentesisBalanceados':
+exercises.c:137:37: error: expected expression before ';' token
+    for (int i = talla - 1; i >= 0;  ;i--) {
+                                     ^
+Compilation failed
+9991a3a
