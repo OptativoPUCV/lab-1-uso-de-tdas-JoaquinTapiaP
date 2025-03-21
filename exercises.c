@@ -160,6 +160,9 @@ int parentesisBalanceados(char *cadena) {
       palBack = pop(StackBack);
       palFront = pop(StackFront);
    }
+   printf("TALLA: %d", talla);
+   printf("AUXILIAR: %d", aux);
+
 
    if (aux != (talla / 2)) {
       return 0;
