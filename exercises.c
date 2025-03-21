@@ -133,6 +133,10 @@ int parentesisBalanceados(char *cadena) {
           
    }
    int talla = get_size(StackBack);
+   
+   if (talla % 2 != 0) {
+      return 0;
+   }  
 
    for (int i = talla - 1; cadena[i] >= 0; i--) {
       push(StackFront, &cadena[i]);
@@ -141,9 +145,7 @@ int parentesisBalanceados(char *cadena) {
 
    //[ ]
 
-   if (talla % 2 != 0) {
-      return 0;
-   }  
+   
 
    char *palBack = top(StackBack);
    char *palFront = top(StackFront);
