@@ -127,23 +127,18 @@ int parentesisBalanceados(char *cadena) {
 
    Stack* StackFront = create_stack();
    Stack* StackBack = create_stack();
-   Stack* AuxStack = create_stack();
 
    for (int i = 0; cadena[i] != '\0' ;i++) {
-      push(StackFront, &cadena[i]);
-      push(AuxStack, &cadena[i]);      
+      push(StackBack, &cadena[i]); 
+          
    }
-   int talla = get_size(StackFront);
+   int talla = get_size(StackBack);
    if (talla % 2 != 0) {
       return 0;
    }  
 
-   char *palAux = top(AuxStack);
-   
-   for (int i = 0; cadena[i] != '\0' ;i++) {
-      push(StackBack, &palAux);    
-      pop(AuxStack);
-      palAux = top(AuxStack);
+   for (int i = talla - 1; cadena[i] >= 0; i--) {
+      push(StackFront, &cadena[i]);
    }
    
 
@@ -157,16 +152,16 @@ int parentesisBalanceados(char *cadena) {
    
    for (int k = 0; k < talla; k++) {
 
-      printf("FRONT: %s\n", palFront);
-      printf("BACK: %s\n", palBack);
+      printf("TALLA: %d\n", talla);
+      printf("AUXILIAR: %d\n", aux);
       if ((*palFront == '[') && (*palBack == ']'))
          aux++;
       if ((*palFront == '(') && (*palBack == ')'))
          aux++;
       if ((*palFront == '{') && (*palBack == '}'))
          aux++;
-      palBack = pop(StackBack);
-      palFront = pop(StackFront);
+      pop(StackBack);
+      pop(StackFront);
    }
    printf("TALLA: %d\n", talla);
    printf("AUXILIAR: %d\n", aux);
