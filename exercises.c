@@ -162,7 +162,7 @@ int parentesisBalanceados(char *cadena) {
       palFront = pop(StackFront);
    }
 
-   if (aux != (talla / 2)) {
+   if (aux != (talla)) {
       return 0;
    }
    return 1;
