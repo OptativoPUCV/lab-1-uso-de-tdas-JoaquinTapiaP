@@ -331,3 +331,9 @@ exercises.c:156:22: error: format '%s' expects argument of type 'char *', but ar
 cc1.exe: all warnings being treated as errors
 Compilation failed
 fbdf24c
+Fri, Mar 21, 2025  6:21:44 PM: 
+ exercises.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+ tests:  4|1
+total_score: 50/70
+b25e2f2

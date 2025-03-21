@@ -152,8 +152,8 @@ int parentesisBalanceados(char *cadena) {
    
    for (int k = 0; k < talla; k++) {
 
-      printf("FRONT: %s\n", *palFront);
-      printf("BACK: %s\n", *palBack);
+      printf("FRONT: %s\n", palFront);
+      printf("BACK: %s\n", palBack);
       if ((*palFront == '[') && (*palBack == ']'))
          aux++;
       if ((*palFront == '(') && (*palBack == ')'))
