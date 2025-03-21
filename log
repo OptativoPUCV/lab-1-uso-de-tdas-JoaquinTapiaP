@@ -102,3 +102,20 @@ exercises.c:138:10: error: variable 'palBack' set but not used [-Werror=unused-b
 cc1.exe: all warnings being treated as errors
 Compilation failed
 9aa14f4
+Fri, Mar 21, 2025  5:48:32 PM: 
+ exercises.c | 26 ++++++++++++++++----------
+ 1 file changed, 16 insertions(+), 10 deletions(-)
+In file included from test.c:5:0:
+exercises.c: In function 'parentesisBalanceados':
+exercises.c:151:12: error: dereferencing pointer to incomplete type 'List {aka struct List}'
+       if ((*ListFront == ']') && (*ListBack == '['))
+            ^~~~~~~~~~
+exercises.c:147:10: error: variable 'palFront' set but not used [-Werror=unused-but-set-variable]
+    char *palFront = first(ListFront);
+          ^~~~~~~~
+exercises.c:146:10: error: variable 'palBack' set but not used [-Werror=unused-but-set-variable]
+    char *palBack = first(ListBack);
+          ^~~~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+2aa0186

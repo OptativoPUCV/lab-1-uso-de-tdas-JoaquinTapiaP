@@ -135,25 +135,31 @@ int parentesisBalanceados(char *cadena) {
 
 
    int talla = get_size(ListBack);
-   char *palBack = first(ListBack);
-   char *palFront = first(ListFront);
+   
 
    //[ ]
 
-   if (talla % 2 != 0)
+   if (talla % 2 != 0) {
       return 0;
+   }  
+   
+   char *palBack = first(ListBack);
+   char *palFront = first(ListFront);
+   int aux = 0;
    
    for (int k = 0; k < talla; k++) {
-      if ((ListFront == ']') && (ListBack == '['))
-         return 0;
-      if ((ListFront == ')') && (ListBack == '('))
-         return 0;
-      if ((ListFront == '}') && (ListBack == '{'))
-         return 0;
-
+      if ((*ListFront == ']') && (*ListBack == '['))
+         aux++;
+      if ((*ListFront == ')') && (*ListBack == '('))
+         aux++;
+      if ((*ListFront == '}') && (*ListBack == '{'))
+         aux++;
       palBack = next(ListBack);
       palFront = next(ListFront);
    }
 
+   if (aux != (talla / 2)) {
+      return 0;
+   }
    return 1;
 }
