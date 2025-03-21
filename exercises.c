@@ -158,8 +158,9 @@ int parentesisBalanceados(char *cadena) {
       palFront = pop(StackFront);
    }
 
-   if (aux != (talla / 2)) {
-      return 0;
+   if (aux == (talla / 2)) {
+      return 1;
    }
-   return 1;
+   else
+      return 0;
 }
