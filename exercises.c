@@ -128,13 +128,13 @@ int parentesisBalanceados(char *cadena) {
    Stack* StackFront = create_stack();
    Stack* StackBack = create_stack();
 
-   for (int i = 0; i != '\0' ;i++) {
+   for (int i = 0; cadena[i] != '\0' ;i++) {
       push(StackBack, &cadena[i]); 
           
    }
    int talla = get_size(StackBack);
 
-   for (int i = talla - 1; i >= 0; i--) {
+   for (int i = talla - 1; cadena[i] >= 0; i--) {
       push(StackFront, &cadena[i]);
    }
    
