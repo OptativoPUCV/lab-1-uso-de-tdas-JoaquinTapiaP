@@ -125,12 +125,12 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
 
 int parentesisBalanceados(char *cadena) {
 
-   Stack* ListFront = create_stack();
-   Stack* ListBack = create_list();
+   Stack* StackFront = create_stack();
+   Stack* StackBack = create_list();
 
    for (int i = 0; i != '\0' ;i++) {
-      push(ListBack, &cadena[i]); 
-      pushFront(ListFront, &cadena[i]);     
+      push(StackBack, &cadena[i]); 
+      push(StackFront, &cadena[i]);     
    }
 
 

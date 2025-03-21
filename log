@@ -131,3 +131,17 @@ Fri, Mar 21, 2025  5:53:47 PM:
  tests:  5|1
 total_score: 50/70
 6d379be
+Fri, Mar 21, 2025  5:56:10 PM: 
+ exercises.c | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+In file included from test.c:5:0:
+exercises.c: In function 'parentesisBalanceados':
+exercises.c:137:25: error: 'ListBack' undeclared (first use in this function)
+    int talla = get_size(ListBack);
+                         ^~~~~~~~
+exercises.c:137:25: note: each undeclared identifier is reported only once for each function it appears in
+exercises.c:147:25: error: 'ListFront' undeclared (first use in this function)
+    char *palFront = top(ListFront);
+                         ^~~~~~~~~
+Compilation failed
+2c76da0
