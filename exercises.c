@@ -152,11 +152,11 @@ int parentesisBalanceados(char *cadena) {
    int aux = 0;
    
    for (int k = 0; k < talla; k++) {
-      if ((*palFront == ']') && (*palBack == '['))
+      if ((*palBack == ']') && (*palFront == '['))
          aux++;
-      if ((*palFront == ')') && (*palBack == '('))
+      if ((*palBack == ')') && (*palFront == '('))
          aux++;
-      if ((*palFront == '}') && (*palBack == '{'))
+      if ((*palBack == '}') && (*palFront == '{'))
          aux++;
       palBack = pop(StackBack);
       palFront = pop(StackFront);
