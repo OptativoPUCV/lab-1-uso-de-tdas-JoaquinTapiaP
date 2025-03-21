@@ -70,3 +70,35 @@ Fri, Mar 21, 2025  4:47:56 PM:
 ./test.sh: line 26: gcc: command not found
 Compilation failed
 ba2ccd2
+Fri, Mar 21, 2025  5:47:47 PM: 
+ exercises.c | 31 +++++++++++++++++++++++++++++++
+ 1 file changed, 31 insertions(+)
+In file included from test.c:5:0:
+exercises.c: In function 'parentesisBalanceados':
+exercises.c:147:22: error: comparison between pointer and integer [-Werror]
+       if ((ListFront == ']') && (ListBack == '['))
+                      ^~
+exercises.c:147:43: error: comparison between pointer and integer [-Werror]
+       if ((ListFront == ']') && (ListBack == '['))
+                                           ^~
+exercises.c:149:22: error: comparison between pointer and integer [-Werror]
+       if ((ListFront == ')') && (ListBack == '('))
+                      ^~
+exercises.c:149:43: error: comparison between pointer and integer [-Werror]
+       if ((ListFront == ')') && (ListBack == '('))
+                                           ^~
+exercises.c:151:22: error: comparison between pointer and integer [-Werror]
+       if ((ListFront == '}') && (ListBack == '{'))
+                      ^~
+exercises.c:151:43: error: comparison between pointer and integer [-Werror]
+       if ((ListFront == '}') && (ListBack == '{'))
+                                           ^~
+exercises.c:139:10: error: variable 'palFront' set but not used [-Werror=unused-but-set-variable]
+    char *palFront = first(ListFront);
+          ^~~~~~~~
+exercises.c:138:10: error: variable 'palBack' set but not used [-Werror=unused-but-set-variable]
+    char *palBack = first(ListBack);
+          ^~~~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+9aa14f4

@@ -124,5 +124,36 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
 */
 
 int parentesisBalanceados(char *cadena) {
-   return 0;
+
+   List* ListFront = create_list();
+   List* ListBack = create_list();
+
+   for (int i = 0; i != '\0' ;i++) {
+      pushBack(ListBack, &cadena[i]); 
+      pushFront(ListFront, &cadena[i]);     
+   }
+
+
+   int talla = get_size(ListBack);
+   char *palBack = first(ListBack);
+   char *palFront = first(ListFront);
+
+   //[ ]
+
+   if (talla % 2 != 0)
+      return 0;
+   
+   for (int k = 0; k < talla; k++) {
+      if ((ListFront == ']') && (ListBack == '['))
+         return 0;
+      if ((ListFront == ')') && (ListBack == '('))
+         return 0;
+      if ((ListFront == '}') && (ListBack == '{'))
+         return 0;
+
+      palBack = next(ListBack);
+      palFront = next(ListFront);
+   }
+
+   return 1;
 }
